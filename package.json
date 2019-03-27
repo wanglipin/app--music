@@ -1,0 +1,40 @@
+{
+  "name": "app-shopping",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "cssnano": "^4.1.4",
+    "postcss-aspect-ratio-mini": "0.0.2",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.0",
+    "postcss-px-to-viewport": "0.0.3",
+    "postcss-url": "^8.0.0",
+    "postcss-viewport-units": "^0.1.4",
+    "postcss-write-svg": "^3.0.1",
+    "register-service-worker": "^1.0.0",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vux": "^2.9.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-plugin-eslint": "^3.0.3",
+    "@vue/cli-plugin-pwa": "^3.0.3",
+    "@vue/cli-service": "^3.0.3",
+    "@vue/eslint-config-standard": "^3.0.4",
+    "cssnano-preset-advanced": "^4.0.2",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "postcss": "^7.0.4",
+    "vue-cli-plugin-vux": "^3.0.0",
+    "vue-loader": "14.2.3",
+    "vue-template-compiler": "^2.5.17",
+    "vux-loader": "^1.2.9"
+  }
+}
