@@ -2,7 +2,7 @@
   <div id="app">
     <view-box ref="viewBox">
     <div class="header">
-      头部
+      <app-header></app-header>
     </div>
     <div class="body">
       <keep-alive>
@@ -10,13 +10,14 @@
       </keep-alive>
     </div>
     <div class="footer">
-      <p>页脚</p>
+      页脚
     </div>
     </view-box>
   </div>
 </template>
 <script>
 import { ViewBox } from 'vux'
+import AppHeader from './views/components/AppHeader.vue'
 export default {
   data () {
     return {
@@ -27,7 +28,8 @@ export default {
     
   },
   components: {
-    ViewBox
+    ViewBox,
+    AppHeader
   }
 }
 </script>
@@ -60,6 +62,8 @@ html, body {
   .body {
     width: 100%;
     height: 100%;
+    padding-top: 80px;
+    // padding-bottom: 100px;
     background: lightcoral;
   }
   .footer {
