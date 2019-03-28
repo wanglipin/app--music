@@ -17,7 +17,7 @@
 </template>
 <script>
 import { ViewBox } from 'vux'
-import AppHeader from './views/components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue'
 export default {
   data () {
     return {
