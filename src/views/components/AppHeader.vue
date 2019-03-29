@@ -1,17 +1,27 @@
 <template>
-<div>
   <div calss="header-container">
     <flexbox>
-      <flexboxItem>111111</flexboxItem>
-      <flexboxItem>22222222</flexboxItem>
-      <flexboxItem>133333333</flexboxItem>
+      <flexbox-item :span="2" style="height: 40px;">
+        <div class="header-row">
+          <slot name="left"></slot>
+        </div>
+      </flexbox-item>
+      <flexbox-item :span="8" style="height: 40px; margin: 0px">
+        <div class="header-row">
+          <slot name="input"></slot>
+        </div>
+      </flexbox-item>
+      <flexbox-item :span="2" style="height: 40px; margin: 0px">
+        <div class="header-row">
+            <icon type="waiting"></icon>
+        </div>
+      </flexbox-item>
     </flexbox>
   </div>
-</div>
 </template>
 
 <script>
-import { Flexbox, FlexboxItem } from 'vux'
+import { Flexbox, FlexboxItem, Box, Icon } from 'vux'
 export default {
   data() {
     return {
@@ -20,13 +30,24 @@ export default {
   },
   components: {
     Flexbox,
-    FlexboxItem
+    FlexboxItem,
+    Box,
+    Icon
   }
 }
 </script>
 
 <style lang="less" scoped>
-
+.header-container {
+  width: 100%;
+  height: 100%;
+}
+.header-row {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  // background: red;
+}
 </style>
 
 
