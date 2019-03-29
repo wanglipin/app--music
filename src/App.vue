@@ -22,8 +22,13 @@
   </div>
 </template>
 <script>
+<<<<<<< HEAD
 import { ViewBox, Search, Box, Icon } from 'vux'
 import AppHeader from './views/components/AppHeader.vue'
+=======
+import { ViewBox } from 'vux'
+import AppHeader from './components/AppHeader.vue'
+>>>>>>> 96c01c88f730f8845def49e4bdb21831059ab861
 export default {
   data () {
     return {
