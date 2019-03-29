@@ -2,7 +2,13 @@
   <div id="app">
     <view-box ref="viewBox">
     <div class="header">
-      <app-header></app-header>
+      <app-header>
+        <div class="header-row" slot="left">
+            <icon type="waiting"></icon>
+        </div>
+        <div class="header-row" slot="input">
+        </div>
+      </app-header>
     </div>
     <div class="body">
       <keep-alive>
@@ -16,8 +22,13 @@
   </div>
 </template>
 <script>
+<<<<<<< HEAD
+import { ViewBox, Search, Box, Icon } from 'vux'
+import AppHeader from './views/components/AppHeader.vue'
+=======
 import { ViewBox } from 'vux'
 import AppHeader from './components/AppHeader.vue'
+>>>>>>> 96c01c88f730f8845def49e4bdb21831059ab861
 export default {
   data () {
     return {
@@ -29,7 +40,10 @@ export default {
   },
   components: {
     ViewBox,
-    AppHeader
+    AppHeader,
+    Search,
+    Box, 
+    Icon
   }
 }
 </script>
@@ -57,14 +71,21 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    background: greenyellow;
+    line-height: 80px;
+    // background: greenyellow;
+    input {
+      width: 100%;
+      height: 60px;
+      border-radius: 30px;
+      padding: 5px;
+    }
   }
   .body {
     width: 100%;
     height: 100%;
     padding-top: 80px;
     // padding-bottom: 100px;
-    background: lightcoral;
+    // background: lightcoral;
   }
   .footer {
     position: absolute;
@@ -72,7 +93,7 @@ html, body {
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: greenyellow;
+    // background: greenyellow;
   }
 }
 </style>

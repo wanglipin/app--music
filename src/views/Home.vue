@@ -15,6 +15,6 @@ export default {
 img {
   width: 200px;
   height: 200px;
-  border:0.5px solid red;
+  // border:0.5px solid red;
 }
 </style>
