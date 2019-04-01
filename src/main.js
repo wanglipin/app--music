@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import router from './router'
 import store from './store'
 import '@/registerServiceWorker'
+import '@/assets/css/base.css'
 import '@/axios/axios'
 import '@/filters/vfilters'
 Vue.use(VueRouter)

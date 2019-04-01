@@ -1,9 +1,5 @@
 <template>
   <div calss="header-container">
-    <flexbox >
-      <flexboxItem span="">111111</flexboxItem>
-      <flexboxItem span="12">22222222</flexboxItem>
-      <flexboxItem span="">133333333</flexboxItem>
     <flexbox>
       <flexbox-item :span="2" style="height: 40px;">
         <div class="header-row">
@@ -27,6 +23,7 @@
 <script>
 import { Flexbox, FlexboxItem, Box, Icon } from 'vux'
 export default {
+  name:'layouts',
   data() {
     return {
       

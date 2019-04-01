@@ -3,11 +3,17 @@
     <view-box ref="viewBox">
     <div class="header">
       <app-header>
-        <div class="header-row" slot="left">
+        <template  v-slot:left>
+          <div class="header-row">
             <icon type="waiting"></icon>
-        </div>
-        <div class="header-row" slot="input">
-        </div>
+          </div>
+        </template>
+        <template v-slot:input>
+          <div class="header-inputs">
+            <i class="header-iocn"></i>
+            <input type="text" class="inputs" placeholder="七号公园-许嵩">
+          </div>
+        </template>
       </app-header>
     </div>
     <div class="body">
@@ -22,13 +28,8 @@
   </div>
 </template>
 <script>
-<<<<<<< HEAD
 import { ViewBox, Search, Box, Icon } from 'vux'
-import AppHeader from './views/components/AppHeader.vue'
-=======
-import { ViewBox } from 'vux'
 import AppHeader from './components/AppHeader.vue'
->>>>>>> 96c01c88f730f8845def49e4bdb21831059ab861
 export default {
   data () {
     return {
@@ -72,12 +73,37 @@ html, body {
     top: 0;
     left: 0;
     line-height: 80px;
-    // background: greenyellow;
-    input {
-      width: 100%;
-      height: 60px;
-      border-radius: 30px;
-      padding: 5px;
+    background-color: #FBFBFB;
+    .header-inputs {
+      position: relative;
+      .inputs {
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 30px 30px 30px 30px;
+        padding-left: 50px;
+        background-color: #FBF6F6;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box; /* Firefox */
+        -webkit-box-sizing:border-box; /* Safari */
+      }
+      input::-webkit-input-placeholder {
+      /* placeholder颜色  */
+        color: #aab2bd;
+      /* placeholder字体大小  */
+        font-size: 6px;
+      /* placeholder位置  */
+        text-align: left;
+      }
+      .header-iocn {
+        width: 20px;;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        background: #F70968;
+        transform: translateY(-10px)
+      }
     }
   }
   .body {
@@ -94,6 +120,9 @@ html, body {
     width: 100%;
     height: 100px;
     // background: greenyellow;
+  }
+  .vux-x-icon {
+    fill: #F70968;
   }
 }
 </style>
