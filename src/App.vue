@@ -68,17 +68,17 @@ html, body {
   color: #2c3e50;
   .header {
     width: 100%;
-    height: 80px;
+    height: 100px;
     position: absolute;
     top: 0;
     left: 0;
-    line-height: 80px;
+    line-height: 100px;
     background-color: #FBFBFB;
     .header-inputs {
       position: relative;
       .inputs {
         width: 100%;
-        height: 50px;
+        height: 70px;
         border: none;
         border-radius: 30px 30px 30px 30px;
         padding-left: 50px;
@@ -91,7 +91,7 @@ html, body {
       /* placeholder颜色  */
         color: #aab2bd;
       /* placeholder字体大小  */
-        font-size: 6px;
+        font-size: 18px;
       /* placeholder位置  */
         text-align: left;
       }
@@ -118,7 +118,7 @@ html, body {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 150px;
     // background: greenyellow;
   }
   .vux-x-icon {
