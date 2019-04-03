@@ -1,17 +1,17 @@
 <template>
   <div calss="header-container">
     <flexbox>
-      <flexbox-item :span="2" style="height: 40px;">
-        <div class="header-row">
+      <flexbox-item :span="2" >
+        <div class="header-row" style="margin: 0px;">
           <slot name="left"></slot>
         </div>
       </flexbox-item>
-      <flexbox-item :span="8" style="height: 40px; margin: 0px">
+      <flexbox-item :span="8" style="margin: 0px;" >
         <div class="header-row">
           <slot name="input"></slot>
         </div>
       </flexbox-item>
-      <flexbox-item :span="2" style="height: 40px; margin: 0px">
+      <flexbox-item :span="2" style="margin: 0px;">
         <div class="header-row">
             <icon type="waiting"></icon>
         </div>
