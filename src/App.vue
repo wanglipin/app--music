@@ -68,21 +68,21 @@ html, body {
   color: #2c3e50;
   .header {
     width: 100%;
-    height: 80px;
+    height: 100px;
     position: absolute;
     top: 0;
     left: 0;
-    line-height: 80px;
-    background-color: #FBFBFB;
+    line-height: 100px;
+    background-color:  #ffffff;
     .header-inputs {
       position: relative;
       .inputs {
         width: 100%;
-        height: 50px;
+        height: 70px;
         border: none;
         border-radius: 30px 30px 30px 30px;
-        padding-left: 50px;
-        background-color: #FBF6F6;
+        padding-left: 34%;
+        background-color: #FBFBFB;
         box-sizing:border-box;
         -moz-box-sizing:border-box; /* Firefox */
         -webkit-box-sizing:border-box; /* Safari */
@@ -91,7 +91,7 @@ html, body {
       /* placeholder颜色  */
         color: #aab2bd;
       /* placeholder字体大小  */
-        font-size: 6px;
+        font-size: 25px;
       /* placeholder位置  */
         text-align: left;
       }
@@ -99,17 +99,17 @@ html, body {
         width: 20px;;
         height: 20px;
         position: absolute;
-        top: 50%;
-        left: 20px;
+        top: 30%;
+        left: 30%;
         background: #F70968;
-        transform: translateY(-10px)
+        transform: translate(-20px,10px)
       }
     }
   }
   .body {
     width: 100%;
     height: 100%;
-    padding-top: 80px;
+    padding-top: 100px;
     // padding-bottom: 100px;
     // background: lightcoral;
   }
