@@ -2,7 +2,7 @@
   <div id="app">
     <view-box ref="viewBox">
     <div class="header">
-      <app-header>
+      <app-header :isHeaderShow="isHeaderShow" @back="back">
         <template  v-slot:left>
           <div class="header-row">
             <icon type="waiting"></icon>
@@ -10,8 +10,8 @@
         </template>
         <template v-slot:input>
           <div class="header-inputs">
-            <i class="header-iocn"></i>
-            <input type="text" class="inputs" placeholder="七号公园-许嵩">
+            <i :class="[isHeaderShow?'header-iocnz':'header-iocn']"></i>
+            <input @focus="getFocus" type="text" :class="[isHeaderShow?'inputz':'inputs']" placeholder="七号公园-许嵩">
           </div>
         </template>
       </app-header>
@@ -33,11 +33,19 @@ import AppHeader from './components/AppHeader.vue'
 export default {
   data () {
     return {
-      
+      isHeaderShow: false
     }
   },
   created () {
     
+  },
+  methods: {
+    getFocus () {
+      this.isHeaderShow = true;
+    },
+    back (val){
+      this.isHeaderShow = val
+    }
   },
   components: {
     ViewBox,
@@ -76,12 +84,24 @@ html, body {
     background-color:  #ffffff;
     .header-inputs {
       position: relative;
+      transition: width .5s;
       .inputs {
         width: 100%;
         height: 70px;
         border: none;
         border-radius: 30px 30px 30px 30px;
         padding-left: 34%;
+        background-color: #FBFBFB;
+        box-sizing:border-box;
+        -moz-box-sizing:border-box; /* Firefox */
+        -webkit-box-sizing:border-box; /* Safari */
+      }
+      .inputz {
+        width: 100%;
+        height: 70px;
+        border: none;
+        border-radius: 30px 30px 30px 30px;
+        padding-left: 10%;
         background-color: #FBFBFB;
         box-sizing:border-box;
         -moz-box-sizing:border-box; /* Firefox */
@@ -101,6 +121,15 @@ html, body {
         position: absolute;
         top: 30%;
         left: 30%;
+        background: #F70968;
+        transform: translate(-20px,10px)
+      }
+      .header-iocnz {
+        width: 20px;;
+        height: 20px;
+        position: absolute;
+        top: 30%;
+        left: 8%;
         background: #F70968;
         transform: translate(-20px,10px)
       }
